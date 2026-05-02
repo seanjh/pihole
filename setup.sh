@@ -28,9 +28,9 @@ sudo install -m 0644 "$ROOT_DIR/unbound/srv-records.conf" "$UNBOUND_DIR/srv-reco
 sudo install -m 0644 "$ROOT_DIR/unbound/forward-records.conf" "$UNBOUND_DIR/forward-records.conf"
 
 sudo systemctl daemon-reload
+sudo systemctl start unbound.service
+sudo systemctl start pihole.service
 
-sudo systemctl enable --now unbound.service
-sudo systemctl enable --now pihole.service
 
 echo "Started Pi-hole + Unbound."
 echo

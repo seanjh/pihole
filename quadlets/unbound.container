@@ -13,4 +13,4 @@ Volume=/opt/pihole/unbound/forward-records.conf:/opt/unbound/etc/unbound/forward
 Restart=on-failure
 
 [Install]
-WantedBy=multi-user.target default.target
+WantedBy=default.target
