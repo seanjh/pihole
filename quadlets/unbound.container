@@ -4,7 +4,6 @@ Description=unbound recursive DNS resolver
 [Container]
 Image=unbound.build
 Network=host
-Pod=unbound
 ServiceName=unbound
 Volume=/opt/pihole/unbound:/opt/unbound/etc/unbound:ro
 

@@ -3,4 +3,5 @@ Description=unbound recursive DNS resolver
 
 [Build]
 ImageTag=localhost/unbound
-ServiceName=unbound-build
+File=/opt/pihole/unbound-build/Dockerfile
+SetWorkingDirectory=/opt/pihole/unbound-build
