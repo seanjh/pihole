@@ -87,9 +87,6 @@ WORKDIR /opt/unbound/
 
 ENV PATH /opt/unbound/sbin:"$PATH"
 
-LABEL org.opencontainers.image.version=${UNBOUND_VERSION} \
-      org.opencontainers.image.description="a validating, recursive, and caching DNS resolver"
-
 EXPOSE 53/tcp
 EXPOSE 53/udp
 
