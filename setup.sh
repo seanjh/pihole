@@ -23,7 +23,9 @@ sudo install -m 0644 "$ROOT_DIR/quadlets/unbound.build" "$QUADLET_DIR/unbound.bu
 sudo install -m 0644 "$ROOT_DIR/unbound/Dockerfile" "$UNBOUND_BUILD_DIR/Dockerfile"
 sudo install -m 0755 "$ROOT_DIR/unbound/data/unbound.sh" "$UNBOUND_BUILD_DIR/data/unbound."
 sudo install -m 0644 "$ROOT_DIR/etc-pihole/pihole.toml" "$PIHOLE_DATA_DIR/pihole.toml"
-sudo install -m 0644 "$ROOT_DIR/unbound/unbound.conf" "$UNBOUND_DIR/unbound.conf"
+sudo install -m 0644 "$ROOT_DIR/unbound/a-records.conf" "$UNBOUND_DIR/a-records.conf"
+sudo install -m 0644 "$ROOT_DIR/unbound/srv-records.conf" "$UNBOUND_DIR/srv-records.conf"
+sudo install -m 0644 "$ROOT_DIR/unbound/forward-records.conf" "$UNBOUND_DIR/forward-records.conf"
 
 sudo systemctl daemon-reload
 

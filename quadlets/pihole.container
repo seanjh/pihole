@@ -9,6 +9,7 @@ ContainerName=pihole
 Network=host
 AddCapability=SYS_NICE
 Environment=TZ=America/New_York
+Environment=FTLCONF_dns_upstreams=127.0.0.1#5335
 Volume=/opt/pihole/etc-pihole:/etc/pihole
 
 [Service]
