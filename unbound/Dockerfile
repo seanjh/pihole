@@ -37,8 +37,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libexpat1 \
   && rm -rf /var/lib/apt/lists/* \
   && useradd --system --home /nonexistent --shell /usr/sbin/nologin unbound \
-  && mkdir -p /opt/unbound/etc/unbound /var/lib/unbound \
-  && chown -R unbound:unbound /opt/unbound /var/lib/unbound
+  && mkdir -p /opt/unbound/etc/unbound /var/lib/unbound /run/unbound \
+  && chown -R unbound:unbound /opt/unbound /var/lib/unbound /run/unbound
 
 COPY --from=build /usr/local/sbin/unbound /usr/local/sbin/unbound
 COPY --from=build /usr/local/sbin/unbound-checkconf /usr/local/sbin/unbound-checkconf
@@ -48,8 +48,6 @@ COPY --from=build /usr/local/lib /usr/local/lib
 ENV LD_LIBRARY_PATH=/usr/local/lib
 
 EXPOSE 5335/tcp 5335/udp
-
-USER unbound
 
 ENTRYPOINT ["unbound"]
 CMD ["-d", "-c", "/opt/unbound/etc/unbound/unbound.conf"]
