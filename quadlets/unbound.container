@@ -1,0 +1,14 @@
+[Unit]
+Description=Unbound
+
+[Container]
+Image=docker.io/mvance/unbound:1.21.1
+ContainerName=unbound
+Network=host
+Volume=/opt/pihole/unbound:/opt/unbound/etc/unbound:ro
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
