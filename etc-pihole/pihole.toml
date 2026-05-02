@@ -1,0 +1,9 @@
+[dns]
+upstreams = ["127.0.0.1#5335"]
+
+hostRecord = [
+  "flipper,flipper.home.lan,192.168.1.111",
+  "liveoak,liveoak.home.lan,192.168.1.188",
+  "bromeliad,bromeliad.home.lan,192.168.1.165",
+  "mosquito,mosquito.home.lan,192.168.1.159"
+]

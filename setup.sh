@@ -15,6 +15,7 @@ sudo install -d -m 0755 "$UNBOUND_DIR"
 
 sudo install -m 0644 "$ROOT_DIR/quadlets/pihole.container" "$QUADLET_DIR/pihole.container"
 sudo install -m 0644 "$ROOT_DIR/quadlets/unbound.container" "$QUADLET_DIR/unbound.container"
+sudo install -m 0644 "$ROOT_DIR/quadlets/unbound.build" "$QUADLET_DIR/unbound.build"
 
 sudo install -m 0644 "$ROOT_DIR/etc-pihole/pihole.toml" "$PIHOLE_DATA_DIR/pihole.toml"
 sudo install -m 0644 "$ROOT_DIR/unbound/unbound.conf" "$UNBOUND_DIR/unbound.conf"
