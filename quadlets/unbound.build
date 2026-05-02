@@ -4,4 +4,3 @@ Description=unbound recursive DNS resolver
 [Build]
 ImageTag=localhost/unbound
 ServiceName=unbound-build
-BuildArg=UNBOUND_VERSION=1.25.0
