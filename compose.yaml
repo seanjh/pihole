@@ -3,7 +3,6 @@ services:
   pihole:
     image: docker.io/pihole/pihole:2026.04.0
     container_name: pihole
-    network_mode: host
     depends_on: [unbound]
     cap_add: [SYS_NICE]
     environment:
@@ -15,6 +14,5 @@ services:
       context: ./unbound
       dockerfile: Dockerfile
     container_name: unbound
-    network_mode: host
     volumes: [./unbound:/opt/unbound/etc/unbound:ro]
     restart: unless-stopped

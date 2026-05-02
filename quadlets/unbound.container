@@ -1,0 +1,15 @@
+[Unit]
+Description=unbound recursive DNS resolver
+
+[Container]
+Image=unbound.build
+Network=host
+Pod=unbound
+ServiceName=unbound
+Volume=/opt/pihole/unbound:/opt/unbound/etc/unbound:ro
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target default.target
