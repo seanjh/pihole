@@ -12,8 +12,9 @@ Minimal, self-contained local DNS stack using Pi-hole (DNS + ad blocking) and Un
 
 ## Usage
 
-- `sudo docker-compose up -d --build` - start
-- `docker-compose pull && sudo docker-compose up -d --build` - upgrade
+- `cp ./pihole/pihole.toml ./data && sudo docker-compose up -d --build` - start
+- `sudo docker-compose logs -f` - follow logs
+- `cp ./pihole/pihole.toml && docker-compose pull && sudo docker-compose up -d --build` - upgrade
 - `sudo docker-compose down` - stop
 
 ### Testing
