@@ -109,12 +109,12 @@ server:
     log-replies: no
 
     # Do not print log lines that say why queries return SERVFAIL to clients
-    log-servfail: no
+    log-servfail: yes
 
     # If you want to log to a file, use:
     # logfile: /opt/unbound/etc/unbound/unbound.log
     # Set log location (using /dev/null further limits logging)
-    logfile: /dev/null
+    logfile: ""
 
     # Set logging level
     # Level 0: No verbosity, only errors.
@@ -123,7 +123,7 @@ server:
     # Level 3: Gives query level information, output per query.
     # Level 4:  Gives algorithm level information.
     # Level 5: Logs client identification for cache misses.
-    verbosity: 0
+    verbosity: 1
 
     ###########################################################################
     # PRIVACY SETTINGS
@@ -270,7 +270,7 @@ server:
     # servers and checks if the reply still has the correct casing.
     # This feature is an experimental implementation of draft dns-0x20.
     # Experimental option.
-    use-caps-for-id: yes
+    use-caps-for-id: no
 
     # Help protect users that rely on this validator for authentication from
     # potentially bad data in the additional section. Instruct the validator to

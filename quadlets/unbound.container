@@ -9,6 +9,7 @@ AddCapability=CAP_MKNOD
 Volume=/opt/pihole/unbound/a-records.conf:/opt/unbound/etc/unbound/a-records.conf:ro
 Volume=/opt/pihole/unbound/srv-records.conf:/opt/unbound/etc/unbound/srv-records.conf:ro
 Volume=/opt/pihole/unbound/forward-records.conf:/opt/unbound/etc/unbound/forward-records.conf:ro
+LogDriver=journald
 
 [Service]
 Restart=on-failure
